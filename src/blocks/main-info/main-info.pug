@@ -1,0 +1,12 @@
+include __user-info/main-info__user-info.pug
+include __desc/main-info__desc.pug
+include __title/main-info__title.pug
+include ../food-properties-grid/food-properties-grid.pug
+mixin main-info(modifier)
+  if modifier == undefined
+    - modifier = {};
+  .main-info&attributes(attributes)
+    +main-info__title(modifier)
+    +main-info__desc(modifier)
+    +main-info__user-info(modifier)
+    +food-properties-grid(modifier.foodPropertiesGrid)

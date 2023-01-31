@@ -1,0 +1,4 @@
+mixin main-info__user-info(modifier)
+  if modifier["userInfo"] == undefined
+    - modifier["userInfo"] = "empty__userInfo";
+  p.main-info__user-info&attributes(attributes)!=modifier.userInfo

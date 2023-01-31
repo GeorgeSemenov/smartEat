@@ -1,0 +1,10 @@
+mixin schedule__cell(modifier)
+  .schedule__cell&attributes(attributes)
+    +schedule__cell-title(modifier)
+    if modifier["cellRows"] != undefined
+      each cellRow in modifier.cellRows
+        if cellRow["modificator"] == undefined
+          - cellRow["modificator"] = "";
+        +schedule__cell-row(cellRow)(class=cellRow.modificator)
+
+    +schedule__cell-caption(modifier)

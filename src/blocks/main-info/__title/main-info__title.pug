@@ -1,0 +1,4 @@
+mixin main-info__title(modifier)
+  if modifier["title"] == undefined
+    - modifier["title"] = "empty__title";
+  h1.main-info__title&attributes(attributes)!=modifier.title

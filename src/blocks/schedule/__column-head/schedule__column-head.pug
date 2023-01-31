@@ -1,0 +1,4 @@
+mixin schedule__column-head(modifier)
+  if modifier == undefined
+    - modifier = "empty__column-head";
+  .schedule__column-head&attributes(attributes)!=modifier

@@ -1,0 +1,15 @@
+/* Компоненты */
+@import './vendor/UnCss';/* т.к. он сбрасывает все стили */
+@import './blocks/header/header';
+@import './blocks/main-info/main-info';
+@import './blocks/schedule/schedule';
+
+html {
+  font-family: 'RobotoCondensed';
+  font-weight: 400;
+  font-size: 10px;
+}
+
+body{
+  padding: 20px;
+}

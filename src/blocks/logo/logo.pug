@@ -1,0 +1,8 @@
+include __text/logo__text.pug
+include __img/logo__img.pug
+mixin logo(modifier)
+  if modifier == undefined
+    - modifier = {};
+  .logo&attributes(attributes)
+    +logo__img(modifier)
+    +logo__text(modifier)

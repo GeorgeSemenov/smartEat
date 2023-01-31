@@ -1,0 +1,4 @@
+mixin main-info__desc(modifier)
+  if modifier["desc"] == undefined
+    - modifier["desc"] = "empty__desc";
+  p.main-info__desc&attributes(attributes)!=modifier.desc

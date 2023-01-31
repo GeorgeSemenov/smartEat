@@ -1,0 +1,37 @@
+include __caption/schedule__caption.pug
+include __cell-caption/schedule__cell-caption.pug
+include __property-value/schedule__property-value.pug
+include __property-name/schedule__property-name.pug
+include __cell-row/schedule__cell-row.pug
+include __cell-title/schedule__cell-title.pug
+include __cell/schedule__cell.pug
+include __row-head/schedule__row-head.pug
+include __column-head/schedule__column-head.pug
+mixin schedule(modifier)
+  if modifier == undefined
+    - modifier = {};
+
+  .schedule&attributes(attributes)
+    if modifier["columnHeads"] == undefined
+      - modifier["columnHeads"] = [];
+    if modifier["rows"] == undefined
+      - modifier["rows"] = [];
+
+    div 
+
+    each columnHead in modifier.columnHeads
+      if columnHead["modificator"] == undefined
+        - columnHead["modificator"] = "";
+      +schedule__column-head(columnHead)(class=columnHead.modificator)
+    
+    each row in modifier.rows
+      if row["modificator"] == undefined
+        - row["modificator"] = "";
+      +schedule__row-head(row)(class=row.modificator)
+      each cell in row.cells
+        if cell["modificator"] == undefined
+          - cell["modificator"] = "";
+        +schedule__cell(cell)(class=cell.modificator)
+      
+
+    +schedule__caption(modifier)

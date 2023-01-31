@@ -1,0 +1,4 @@
+mixin schedule__caption(modifier)
+  if modifier["caption"] == undefined
+    - modifier["caption"] = "empty__caption";
+  p.schedule__caption&attributes(attributes)!=modifier.caption

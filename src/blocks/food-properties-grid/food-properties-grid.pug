@@ -1,0 +1,16 @@
+include __property-name/food-properties-grid__property-name.pug
+include __property-value/food-properties-grid__property-value.pug
+mixin food-properties-grid(modifier)
+  if modifier == undefined
+    - modifier = [{}];
+  table.food-properties-grid&attributes(attributes)
+    tr
+      each propVal in modifier.propertyValues
+        if propVal["modificator"] == undefined
+          - propVal["modificator"] = "";
+        +food-properties-grid__property-value(propVal)(class=propVal.modificator)
+    tr
+      each propName in modifier.propertyNames
+        if propName["modificator"] == undefined
+          - propName["modificator"] = "";
+        +food-properties-grid__property-name(propName)(class=propName.modificator)

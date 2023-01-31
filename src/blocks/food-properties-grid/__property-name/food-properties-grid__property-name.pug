@@ -1,0 +1,4 @@
+mixin food-properties-grid__property-name(modifier)
+  if modifier == undefined
+    - modifier = "empty__propertyName";
+  td.food-properties-grid__property-name&attributes(attributes)!=modifier

@@ -1,0 +1,17 @@
+@import '__user-info/main-info__user-info';
+@import '__desc/main-info__desc';
+@import '__title/main-info__title';
+@import '../food-properties-grid/food-properties-grid';
+
+.main-info {
+  font-size: 1.35rem;
+}
+
+/*
+{
+  title:"",
+  desc:"",
+  userInfo:"",
+  foodPropertiesGrid:{},
+}
+*/
