@@ -1,4 +1,5 @@
 mixin schedule__row-head(modifier)
   if modifier["rowHead"] == undefined
     - modifier["rowHead"] = "empty__rowHead";
-  .schedule__row-head&attributes(attributes)!=modifier.rowHead
+  .schedule__row-head&attributes(attributes)
+    p!=modifier.rowHead

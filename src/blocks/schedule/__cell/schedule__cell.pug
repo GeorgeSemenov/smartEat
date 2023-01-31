@@ -1,5 +1,8 @@
 mixin schedule__cell(modifier)
-  .schedule__cell&attributes(attributes)
+  - var cl = ""
+  if (modifier["cellTitle"] != undefined) || (modifier["cellRows"] != undefined)
+    - cl = "schedule__cell"
+  div(class=cl)&attributes(attributes)
     +schedule__cell-title(modifier)
     if modifier["cellRows"] != undefined
       each cellRow in modifier.cellRows

@@ -1,1 +1,5 @@
-.schedule__row-head {}
+.schedule__row-head {
+  p {
+    transform: rotate(-90deg);
+  }
+}

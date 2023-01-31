@@ -1,6 +1,9 @@
 /* Компоненты */
 @import './vendor/UnCss';/* т.к. он сбрасывает все стили */
+
+/*блоки*/
 @import './blocks/header/header';
+@import './blocks/menu-screen/menu-screen';
 @import './blocks/main-info/main-info';
 @import './blocks/schedule/schedule';
 

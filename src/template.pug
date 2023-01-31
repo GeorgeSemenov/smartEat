@@ -1,4 +1,5 @@
 include ./blocks/header/header.pug
+include ./blocks/menu-screen/menu-screen.pug
 include ./blocks/main-info/main-info.pug
 include ./blocks/schedule/schedule.pug
 
@@ -9,93 +10,7 @@ html(lang= 'ru')
     title= 'SmartEat'
   body
     +header({})
-    +main-info({
-      title:"1 неделя",
-      desc:"Пример плана на 1 день",
-      userInfo:"Иванов Ваня",
-      foodPropertiesGrid:{
-        propertyValues:["114","87","323","2530",],
-        propertyNames: ["белок","жир","углеводы","ккал"]
-      },
-    })
-    +schedule({
-      columnHeads:["ПОНЕДЕЛЬНИК","ВТОРНИК","СРЕДА","ЧЕТВЕРГ","ПЯТНИЦА","СУББОТА","ВОСКРЕСЕНЬЕ",],
-      rows: [
-        {
-          rowHead: "ЗАВТРАК",
-          cells:[
-            {
-              cellTitle:"Каша на воде и яичница/омлет:",
-              cellRows:[
-                {
-                  propertyName:"Гречка",
-                  propertyValue: "200г.",
-                },
-                {
-                  propertyName:"Хлеб ц.зерн. ",
-                  propertyValue: "40г.",
-                },
-                {
-                  propertyName:"Белок",
-                  propertyValue: "1шт.",
-                },
-                {
-                  propertyName:"Лук репчатый",
-                  propertyValue: "30г.",
-                },
-              ],
-              cellCaption: "Можно разделить этот прием пищи на 2 раза",
-            },
-            {},{},{},{},{}
-          ],
-        },
-        {
-          rowHead: "ОБЕД",
-          cells:[
-            {
-              cellTitle:"Птица тушеная с овощами, гарнир:",
-              cellRows:[
-                {
-                  propertyName:"Куриная грудка",
-                  propertyValue: "110г.",
-                },
-                {
-                  propertyName:"Лук репчатый",
-                  propertyValue: "40г.",
-                },
-                {
-                  propertyName:"Гречка",
-                  propertyValue: "200г.",
-                },
-                {
-                  propertyName:"Масло льняное",
-                  propertyValue: "40г.",
-                },
-              ],
-              cellCaption: "Можно разделить этот прием пищи на 2 раза",
-            },
-            {},{},{},{},{}
-          ],
-        },
-        {
-          rowHead: "УЖИН",
-          cells:[
-            {
-              cellTitle:"Рыба на пару с овощами:",
-              cellRows:[
-                {
-                  propertyName:"Судак",
-                  propertyValue: "150г.",
-                },
-                {
-                  propertyName:"Масло льняное",
-                  propertyValue: "30г.",
-                },
-              ],
-            },
-            {},{},{},{},{}
-          ],
-        }
-      ],
-      caption: "* Вес продуктов указан в сыром виде (крупы, птица, мясо, рыба).",
-    })
+    main
+      +menu-screen({})
+    
+    

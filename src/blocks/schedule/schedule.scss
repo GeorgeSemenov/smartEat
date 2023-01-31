@@ -9,8 +9,11 @@
 @import '__column-head/schedule__column-head';
 .schedule {
   display: grid;
-  grid-template-columns: 50px repeat(6,200px);
-
+  grid-template-columns: 8px repeat(7,auto);
+  // grid-template-columns: 8px repeat(7, 106px);
+  justify-items: center;
+  gap: 0px 35px;
+  overflow-x: scroll;
 }
 
 /*
