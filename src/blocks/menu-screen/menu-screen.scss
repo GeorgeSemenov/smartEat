@@ -1,4 +1,7 @@
 @import '__main-info/menu-screen__main-info';
 @import '__schedule/menu-screen__schedule';
+@import '../schedule/schedule';
 @import '../main-info/main-info';
-.menu-screen {}
+.menu-screen {
+  padding-right: 18px;
+}

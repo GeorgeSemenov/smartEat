@@ -1,1 +1,9 @@
-.schedule__cell-row {}
+.schedule__cell-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 1px ; 
+  &:last-child{
+    margin-bottom:0px;
+  }
+}

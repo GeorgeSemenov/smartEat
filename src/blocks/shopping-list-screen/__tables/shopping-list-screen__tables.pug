@@ -1,0 +1,9 @@
+mixin shopping-list-screen__tables(modifier)
+  if modifier["propTables"] == undefined
+    - modifier["propTables"] = [{}];
+  .shopping-list-screen__tables&attributes(attributes)
+    each propTable in modifier.propTables
+      if propTable["modificator"] == undefined
+        - propTable["modificator"] = "";
+      +properties-table(propTable)(class=propTable.modificator)
+    

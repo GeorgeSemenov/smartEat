@@ -3,6 +3,8 @@ include __img/logo__img.pug
 mixin logo(modifier)
   if modifier == undefined
     - modifier = {};
-  .logo&attributes(attributes)
+  if modifier["href"] == undefined
+    - modifier["href"] = "#!";
+  a.logo(href=modifier.href)&attributes(attributes)
     +logo__img(modifier)
     +logo__text(modifier)

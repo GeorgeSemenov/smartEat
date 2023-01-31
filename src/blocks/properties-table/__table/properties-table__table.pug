@@ -1,0 +1,9 @@
+mixin properties-table__table(modifier)
+  if modifier["propPairs"] == undefined
+    - modifier["propPairs"] = [{}];
+  .properties-table__table&attributes(attributes)
+    each pair in modifier.propPairs
+      if pair["modificator"] == undefined
+        - pair["modificator"] = "";
+      +properties-table__prop-name(pair)(class=pair.modificator)
+      +properties-table__prop-value(pair)(class=pair.modificator)

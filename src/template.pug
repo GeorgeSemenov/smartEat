@@ -1,16 +1,62 @@
 include ./blocks/header/header.pug
-include ./blocks/menu-screen/menu-screen.pug
-include ./blocks/main-info/main-info.pug
-include ./blocks/schedule/schedule.pug
+include ./blocks/footer/footer.pug
+//- include ./blocks/menu-screen/menu-screen.pug
+include ./blocks/shopping-list-screen/shopping-list-screen.pug
+
 
 doctype html
 html(lang= 'ru')
   head
     meta(charset='utf-8')
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
     title= 'SmartEat'
   body
-    +header({})
-    main
-      +menu-screen({})
+    div
+      +header({})
+      main
+        //- +menu-screen({})
+      +shopping-list-screen({
+        propTables:[
+          {
+            title:"ДЛИТЕЛЬНОГО ХРАНЕНИЯ",
+            propPairs:[
+              {
+                name:"Гречка",
+                value: "400 гр",
+              },
+              {
+                name:"Масло льняное",
+                value: "100 мл",
+              },
+              {
+                name:"Яйца",
+                value: "1 шт.",
+              },
+            ],
+          },
+          {
+            title:"СКОРОПОРТЯЩИЕСЯ",
+            propPairs:[
+              {
+                name:"Цельнозерновой хлеб",
+                value: "50 гр",
+              },
+              {
+                name:"Куриная грудка",
+                value: "150 гр",
+              },
+              {
+                name:"Судак",
+                value: "150 гр",
+              },
+              {
+                name:"Лук репчатый",
+                value: "100 гр",
+              },
+            ],
+          },
+        ]
+      })  
+    +footer()
     
     

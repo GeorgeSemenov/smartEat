@@ -1,4 +1,5 @@
 include ../main-info/main-info.pug
+include ../schedule/schedule.pug
 mixin menu-screen(modifier)
   .menu-screen&attributes(attributes)
     +main-info({
@@ -46,6 +47,7 @@ mixin menu-screen(modifier)
           cells:[
             {
               cellTitle:"Птица тушеная с овощами, гарнир:",
+              modificator: "schedule__cell_bg_light",
               cellRows:[
                 {
                   propertyName:"Куриная грудка",

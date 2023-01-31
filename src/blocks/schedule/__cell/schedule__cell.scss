@@ -1,3 +1,8 @@
 .schedule__cell {
-  width: 106px;
+  background-color: $schedule__cell--BGColor;
+  &_bg_light{background-color: $schedule__cell_bg_light--BGColor;}
+  width: 108px;
+  padding: 6px 6px 6px;
+  font-size: 1.15rem;
+  box-sizing: border-box;
 }

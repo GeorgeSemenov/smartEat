@@ -1,11 +1,14 @@
 /* Компоненты */
 @import './vendor/UnCss';/* т.к. он сбрасывает все стили */
 
+/*Цвета*/
+@import './styles/colors';
+
 /*блоки*/
 @import './blocks/header/header';
-@import './blocks/menu-screen/menu-screen';
-@import './blocks/main-info/main-info';
-@import './blocks/schedule/schedule';
+@import './blocks/footer/footer';
+@import './blocks/shopping-list-screen/shopping-list-screen';
+// @import './blocks/menu-screen/menu-screen';
 
 html {
   font-family: 'RobotoCondensed';
@@ -14,5 +17,9 @@ html {
 }
 
 body{
-  padding: 20px;
+  &>div{
+    padding: 20px;
+    height: 100vh;
+    box-sizing: border-box;
+  }
 }

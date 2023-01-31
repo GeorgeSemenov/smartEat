@@ -10,10 +10,9 @@
 .schedule {
   display: grid;
   grid-template-columns: 8px repeat(7,auto);
-  // grid-template-columns: 8px repeat(7, 106px);
   justify-items: center;
-  gap: 0px 35px;
-  overflow-x: scroll;
+  gap: 0px 15px;
+  margin-bottom: 27px ; 
 }
 
 /*

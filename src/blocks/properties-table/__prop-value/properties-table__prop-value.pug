@@ -1,0 +1,4 @@
+mixin properties-table__prop-value(modifier)
+  if modifier["value"] == undefined
+    - modifier["value"] = "empty__value";
+  p.properties-table__prop-value&attributes(attributes)!=modifier.value

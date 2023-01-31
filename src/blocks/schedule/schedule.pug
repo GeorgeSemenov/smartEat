@@ -32,6 +32,5 @@ mixin schedule(modifier)
         if cell["modificator"] == undefined
           - cell["modificator"] = "";
         +schedule__cell(cell)(class=cell.modificator)
-      
 
-    +schedule__caption(modifier)
+  +schedule__caption(modifier)

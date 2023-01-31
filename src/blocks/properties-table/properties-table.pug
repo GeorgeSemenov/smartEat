@@ -1,0 +1,10 @@
+include __prop-value/properties-table__prop-value.pug
+include __prop-name/properties-table__prop-name.pug
+include __table/properties-table__table.pug
+include __title/properties-table__title.pug
+mixin properties-table(modifier)
+  if modifier == undefined
+    - modifier = {};
+  .properties-table&attributes(attributes)
+    +properties-table__title(modifier)
+    +properties-table__table(modifier)

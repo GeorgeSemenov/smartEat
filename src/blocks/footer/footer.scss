@@ -1,0 +1,23 @@
+@import '__link/footer__link';
+@import '__phone/footer__phone';
+@import '__site/footer__site';
+.footer {
+  height: 12px;
+  margin-top: -52px;
+  font-size: 1.1rem;
+
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+
+  @media (max-height: 655px){
+    height: auto;
+    margin-top: 0px;
+  }
+}
+
+/*
+  site: "www.smart-eat.ru",
+  phone: "+7 499 714-64-91",
+  link: {}
+*/

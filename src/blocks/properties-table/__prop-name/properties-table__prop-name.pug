@@ -1,0 +1,4 @@
+mixin properties-table__prop-name(modifier)
+  if modifier["name"] == undefined
+    - modifier["name"] = "empty__name";
+  p.properties-table__prop-name&attributes(attributes)!=modifier.name

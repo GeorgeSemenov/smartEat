@@ -1,4 +1,7 @@
 .schedule__row-head {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   p {
     transform: rotate(-90deg);
   }

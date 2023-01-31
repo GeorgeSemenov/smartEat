@@ -1,0 +1,3 @@
+mixin footer__phone(modifier)
+  if modifier["tel"] != undefined
+    a.footer__phone(href="tel:+#{modifier.tel}")&attributes(attributes)!=modifier.phone

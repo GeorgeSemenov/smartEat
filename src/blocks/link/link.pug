@@ -1,0 +1,8 @@
+mixin link(modifier)
+  if modifier == undefined
+    - modifier = {};
+  if modifier["text"] == undefined
+    - modifier["text"] = "empty__text";
+  if modifier["href"] == undefined
+    - modifier["href"] = "#!";
+  a.link()&attributes(attributes)

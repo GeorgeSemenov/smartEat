@@ -1,1 +1,6 @@
-.schedule__cell-caption {}
+.schedule__cell-caption {
+  margin-top: 4px;
+  font-weight: 700;
+  font-size: 0.86rem;
+  color: $schedule__cell-caption--Color;
+}

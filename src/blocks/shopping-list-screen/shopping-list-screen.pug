@@ -1,2 +1,7 @@
+include __tables/shopping-list-screen__tables.pug
+include ../properties-table/properties-table.pug
 mixin shopping-list-screen(modifier)
+  if modifier == undefined
+    - modifier = {};
   .shopping-list-screen&attributes(attributes)
+    +shopping-list-screen__tables(modifier)
