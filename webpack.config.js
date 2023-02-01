@@ -1,9 +1,11 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 const FileManagerPlugin = require('filemanager-webpack-plugin');
+const pages = require('./webpack/pages');
 
 module.exports = {
-  entry: path.join(__dirname, 'src', 'index.js'),
+  // entry: path.join(__dirname, 'src', 'index.js'),
+  entry: pages.map(page=>path.join(__dirname, 'src', `${page}.js`))
   output: {
     path: path.join(__dirname, 'dist'),
     filename: 'index.[contenthash].js',

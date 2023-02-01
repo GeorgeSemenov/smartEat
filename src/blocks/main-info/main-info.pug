@@ -9,4 +9,5 @@ mixin main-info(modifier)
     +main-info__title(modifier)
     +main-info__desc(modifier)
     +main-info__user-info(modifier)
-    +food-properties-grid(modifier.foodPropertiesGrid)
+    if modifier["foodPropertiesGrid"] != undefined
+      +food-properties-grid(modifier.foodPropertiesGrid)(class="main-info__food-properties-grid")

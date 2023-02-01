@@ -1,1 +1,23 @@
-.shopping-list-screen__properties-table {}
+.shopping-list-screen__properties-table {
+  width: 212px;
+  &:nth-child(2){
+    width: 250px;
+    .properties-table__table{
+      border-left: 1px solid black;
+      padding-left: 9px;
+      padding-bottom: 9px;
+    }
+  }
+  &:nth-child(1){
+    .properties-table__table{
+      // border-right: 1px solid black;
+      padding-right: 8px;
+    }
+  }
+  @media (max-width: 450px) {
+    margin-bottom: 15px;
+    &:last-child{
+      margin-bottom:0px;
+    }
+  }
+}

@@ -1,9 +1,15 @@
+@import '__tables-divider/shopping-list-screen__tables-divider';
+@import '__main-info/shopping-list-screen__main-info';
 @import '__properties-table/shopping-list-screen__properties-table';
 @import '__tables/shopping-list-screen__tables';
+@import '../main-info/main-info';
+@import '../properties-table/properties-table';
+
 .shopping-list-screen {}
 
 /*
 {
-  propTables:[{propertiesTable}]
+  mainInfo:{main-info},
+  propTables:[{propertiesTable}],
 }
 */

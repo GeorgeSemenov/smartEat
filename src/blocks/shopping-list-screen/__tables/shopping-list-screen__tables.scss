@@ -1,4 +1,9 @@
 .shopping-list-screen__tables {
   display: flex;
   justify-content: flex-start;
+  @media (max-width: 450px) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }

@@ -5,5 +5,5 @@ mixin shopping-list-screen__tables(modifier)
     each propTable in modifier.propTables
       if propTable["modificator"] == undefined
         - propTable["modificator"] = "";
-      +properties-table(propTable)(class=propTable.modificator)
+      +properties-table(propTable)(class="shopping-list-screen__properties-table"+ propTable.modificator)
     

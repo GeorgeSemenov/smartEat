@@ -4,7 +4,7 @@ mixin logo(modifier)
   if modifier == undefined
     - modifier = {};
   if modifier["href"] == undefined
-    - modifier["href"] = "#!";
+    - modifier["href"] = "https://smart-eat.ru/";
   a.logo(href=modifier.href)&attributes(attributes)
     +logo__img(modifier)
     +logo__text(modifier)

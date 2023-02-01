@@ -1,7 +1,10 @@
+include __tables-divider/shopping-list-screen__tables-divider.pug
 include __tables/shopping-list-screen__tables.pug
 include ../properties-table/properties-table.pug
+include ../main-info/main-info.pug
 mixin shopping-list-screen(modifier)
   if modifier == undefined
-    - modifier = {};
+    - modifier = {mainInfo:{title:"Список покупок", desc:"Индивидуальный план питания",userInfo:"Иванов Ваня",},propTables:[{title:"ДЛИТЕЛЬНОГО ХРАНЕНИЯ",propPairs:[{name:"Гречка",value: "400 гр",},{name:"Масло льняное",value: "100 мл",},{name:"Яйца",value: "1 шт.",},],},{title:"СКОРОПОРТЯЩИЕСЯ",propPairs:[{name:"Цельнозерновой хлеб",value: "50 гр",},{name:"Куриная грудка",value: "150 гр",},{name:"Судак",value: "150 гр",},{name:"Лук репчатый",value: "100 гр",},],},]};
   .shopping-list-screen&attributes(attributes)
+    +main-info(modifier.mainInfo)(class="shopping-list-screen__main-info")
     +shopping-list-screen__tables(modifier)
