@@ -1,6 +1,7 @@
 include ../../blocks/header/header.pug
 include ../../blocks/footer/footer.pug
-include ../../blocks/menu-screen/menu-screen.pug
+include ../../blocks/shopping-list-screen/shopping-list-screen.pug
+
 
 doctype html
 html(lang= 'ru')
@@ -12,5 +13,7 @@ html(lang= 'ru')
     div
       +header({})
       main
-        +menu-screen({})
+        +shopping-list-screen()  
     +footer()
+    
+    
