@@ -1,4 +1,4 @@
 module.exports = [
-  'index',
-  // 'shoppingList'
+  // 'index',
+  'shoppingList'
 ]
