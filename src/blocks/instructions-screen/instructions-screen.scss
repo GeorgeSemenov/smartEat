@@ -1,0 +1,8 @@
+.instructions-screen {
+  padding: 0;  
+}
+@import '__main-info/instructions-screen__main-info';
+@import '__instructions-wrapper/instructions-screen__instructions-wrapper';
+@import '__instructions-left-column/instructions-screen__instructions-left-column';
+@import '__instruction/instructions-screen__instruction';
+@import '__instructions-right-column/instructions-screen__instructions-right-column';
