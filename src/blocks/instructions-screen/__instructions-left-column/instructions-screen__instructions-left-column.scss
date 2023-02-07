@@ -1,1 +1,4 @@
-.instructions-screen__instructions-left-column {padding: 0}
+.instructions-screen__instructions-left-column {
+  //Т.к. стили у left-column точно такиеже как и у right-column
+  //то я их просто описал в элементе instructions-screen__instructions-right-column
+}

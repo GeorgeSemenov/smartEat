@@ -5,5 +5,5 @@ mixin instructions-screen__instructions-left-column(modifier)
     each instruction in modifier.instructionsLeftColumn
       if instruction["modificator"] == undefined
         - instruction["modificator"] = "";
-      +instruction(instruction)(class=instruction.modificator)
+      +instruction(instruction)(class="instructions-screen__instruction " + instruction.modificator)
     

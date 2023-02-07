@@ -9,5 +9,5 @@ mixin instructions-screen(modifier)
   if modifier == undefined
     - modifier = {};
   .instructions-screen&attributes(attributes)
-    +main-info(modifier)
+    +main-info(modifier.mainInfo)(class="instructions-screen__main-info")
     +instructions-screen__instructions-wrapper(modifier)

@@ -7,16 +7,21 @@ instruction{
     }
   }
 }
-//modificator=theme_notification - это обычный параграф, только вначале стоит крансый вокслицательный знак
+модификаторы для параграфов:
+instruction__content_notification - это обычный параграф, только вначале стоит крансый вокслицательный знак
+instruction__content_no-vertical-gap - Модификатор который убирает отступ сверху
+
 //В параграфе будет обычный текст, в перемешку с модифицированным текстом, который указывается через textModificator вот какие содификаторы доступны:
-_bold
-_underlined
+
+Модификаторы для типов текста: 
+instruction_text_bold
+instruction_text_underlined
 
 {
   title: "",
   paragraphs: [
     {
-      texts[{text:"",textModificator:""},],
+      texts:[{text:"",textModificator:""},],
       modificator:""
     },
   ],

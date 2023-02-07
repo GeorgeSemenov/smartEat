@@ -1,1 +1,6 @@
-.instructions-screen__instructions-wrapper {padding: 0}
+.instructions-screen__instructions-wrapper {
+  display: flex;
+  @media (max-width: 500px) { 
+    flex-direction: column;  
+  }
+}

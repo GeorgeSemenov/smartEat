@@ -1,1 +1,16 @@
-.instruction__content {padding: 0}
+.instruction__content {
+  font-size: 1.14rem;
+  letter-spacing: 0.15px;
+  margin-bottom: 13px;
+  line-height: 11.7px;
+  &:last-child{margin-bottom:0px;}
+  &_notification:before{
+    content:"! ";
+    color: $instruction__content_theme_notification_before--Color;
+  }
+  &_no-vertical-gap{margin-bottom: 0px;}
+
+
+  span.instruction_text_bold{font-weight: bold;}
+  span.instruction_text_underlined{text-decoration: underline;}
+}
