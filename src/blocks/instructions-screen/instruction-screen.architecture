@@ -1,0 +1,11 @@
+instruction-screen{
+  main-info
+  __instructions-wrapper{
+    __instructions-left-column<instructionsLeftColumn[]>{
+      instruction
+    }
+    __instructions-right-column<instructionsRightColumn[]>{
+      instruction
+    }
+  }
+}

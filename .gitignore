@@ -3,6 +3,7 @@ comipush.sh
 commit.sh
 prototype
 build
+dist
 *.sublime-project
 *.sublime-workspace
 

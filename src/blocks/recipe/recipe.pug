@@ -1,0 +1,31 @@
+include __advice-text/recipe__advice-text.pug
+include __advices-title/recipe__advices-title.pug
+include __advices/recipe__advices.pug
+include __instruction-step-text/recipe__instruction-step-text.pug
+include __instruction-step-title/recipe__instruction-step-title.pug
+include __instruction-step-wrapper/recipe__instruction-step-wrapper.pug
+include __istruction-steps/recipe__istruction-steps.pug
+include __instruction-recipe-name/recipe__instruction-recipe-name.pug
+include __instruction-title/recipe__instruction-title.pug
+include __instruction/recipe__instruction.pug
+include __ingridient/recipe__ingridient.pug
+include __ingridients-title/recipe__ingridients-title.pug
+include __ingridients/recipe__ingridients.pug
+include __recipe-title/recipe__recipe-title.pug
+include __meal-time/recipe__meal-time.pug
+mixin recipe(modifier)
+  if modifier == undefined
+    - modifier = {};
+  if modifier["instructions"] == undefined
+    - modifier["instructions"] = [{}];
+  .recipe&attributes(attributes)
+    if modifier["mealTime"] != undefined
+      +recipe__meal-time(modifier)
+    +recipe__recipe-title(modifier)
+    +recipe__ingridients(modifier)
+    div
+      each instruction in modifier.instructions
+        if instruction["modificator"] == undefined
+          - instruction["modificator"] = "";
+        +recipe__instruction(instruction)(class=instruction.modificator)
+    +recipe__advices(modifier)  

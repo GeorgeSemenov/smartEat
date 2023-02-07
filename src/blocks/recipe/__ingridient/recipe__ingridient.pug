@@ -1,0 +1,4 @@
+mixin recipe__ingridient(modifier)
+  if modifier["text"] == undefined
+    - modifier["text"] = "empty__text";
+  li.recipe__ingridient&attributes(attributes)!=modifier.text

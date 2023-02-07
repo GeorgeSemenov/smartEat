@@ -1,0 +1,13 @@
+instruction{
+  p__title<title>
+  <paragraphs[{texts[],modificator}]>{
+    p__content<texts[{text,textModificator}]>{
+      !span_modificator<text>
+      <text>
+    }
+  }
+}
+//modificator=theme_notification - это обычный параграф, только вначале стоит крансый вокслицательный знак
+//В параграфе будет обычный текст, в перемешку с модифицированным текстом, который указывается через textModificator вот какие содификаторы доступны:
+_bold
+_underlined

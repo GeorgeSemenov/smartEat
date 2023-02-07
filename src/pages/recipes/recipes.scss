@@ -1,0 +1,27 @@
+/* Компоненты */
+@import '../../vendor/UnCss';/* т.к. он сбрасывает все стили */
+
+/*Цвета*/
+@import '../../styles/colors';
+
+/*блоки*/
+@import '../../blocks/header/header';
+@import '../../blocks/footer/footer';
+@import '../../blocks/menu-screen/menu-screen';
+
+html {
+  font-family: 'RobotoCondensed';
+  font-weight: 400;
+  font-size: 10px;
+}
+
+body{
+  background: url('../../images/background-cereral.png'), $body--BGColor;
+  background-position: top right;
+  background-repeat: no-repeat;
+  &>div{
+    padding: 20px;
+    height: 100vh;
+    box-sizing: border-box;
+  }
+}

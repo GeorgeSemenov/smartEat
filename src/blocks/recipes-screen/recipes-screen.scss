@@ -1,0 +1,8 @@
+.recipes-screen {
+  padding: 0;  
+}
+@import '__main-info/recipes-screen__main-info';
+@import '__recipes/recipes-screen__recipes';
+@import '__recipe/recipes-screen__recipe';
+@import '../main-info/main-info';
+@import '../recipe/recipe';

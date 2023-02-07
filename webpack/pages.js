@@ -1,4 +1,5 @@
 module.exports = [
-  // 'index',
-  'shoppingList'
+  'index',
+  "recipes",
+  // 'shoppingList',
 ]

@@ -1,0 +1,4 @@
+mixin recipe__ingridients-title(modifier)
+  if modifier["ingridientsTitle"] == undefined
+    - modifier["ingridientsTitle"] = "Что нужно:";
+  h4.recipe__ingridients-title&attributes(attributes)!=modifier.ingridientsTitle
