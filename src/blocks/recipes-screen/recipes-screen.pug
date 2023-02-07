@@ -1,3 +1,13 @@
 include __recipes/recipes-screen__recipes.pug
+include ../main-info/main-info.pug
+include ../recipe/recipe.pug
 mixin recipes-screen(modifier)
+  if modifier == undefined
+    - modifier = {};
   .recipes-screen&attributes(attributes)
+    +main-info({
+      title:"Рецепты",
+      desc:"Индивидуальный план питания",
+      userInfo:"Иванов Ваня",
+    })
+    +recipes-screen__recipes(modifier)

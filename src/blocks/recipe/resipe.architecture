@@ -1,23 +1,23 @@
-~recipe{//Надо чтобы метод перебирал свойства предаваемого объекта и подбирал нужные кекпоненты
+~recipe{
   !h2.__meal-time<mealTime>
   h3.__recipe-title<recipeTitle>
   __ingridients{
     h4.__ingridients-title<ingridientsTitle="Что нужно:">
     ul<ingridients[{text,modificator}]>{
-      __ingridient{ingridient[0]}
+      li__ingridient{ingridient[0]}
     }
   }
   div<instructions[{instructionTitle,instructionRecipeName,instructionSteps}]>
-  __instruction{
-    !h4__instruction-title<instructionTitle>
-    !h4__instruction-recipe-name<instructionRecipeName>
-    ul__istruction-steps<instructionSteps[{stepTitle, text}]>{
-      li__instruction-step-wrapper{
-        h6__instruction-step-title<stepTitle>
-        p__instruction-step-text<text>
+    __instruction{
+      !h4__instruction-title<instructionTitle>
+      !h4__instruction-recipe-name<instructionRecipeName>
+      ul__istruction-steps<instructionSteps[{stepTitle, text}]>{
+        li__instruction-step-wrapper{
+          h6__instruction-step-title<stepTitle>
+          p__instruction-step-text<text>
+        }
       }
     }
-  }
   __advices{
     !p__advices-title<adviceTitle="Советы:">
     p__advice-text<adviceText>

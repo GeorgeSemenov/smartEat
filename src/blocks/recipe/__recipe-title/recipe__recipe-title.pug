@@ -1,0 +1,4 @@
+mixin recipe__recipe-title(modifier)
+  if modifier["recipeTitle"] == undefined
+    - modifier["recipeTitle"] = "empty__recipeTitle";
+  h3.recipe__recipe-title&attributes(attributes)!=modifier.recipeTitle

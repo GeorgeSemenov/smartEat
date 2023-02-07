@@ -1,2 +1,9 @@
 mixin recipes-screen__recipes(modifier)
+  if modifier["recipes"] == undefined
+    - modifier["recipes"] = [{}];
   .recipes-screen__recipes&attributes(attributes)
+    each recipe in modifier.recipes
+      if recipe["modificator"] == undefined
+        - recipe["modificator"] = "";
+      +recipe(recipe)(class=recipe.modificator)
+    
