@@ -1,1 +1,4 @@
 .recipe__advice-text {padding: 0}
+.recipe__advice-text + .recipe__advice-text{
+  margin-top: 14px;
+}

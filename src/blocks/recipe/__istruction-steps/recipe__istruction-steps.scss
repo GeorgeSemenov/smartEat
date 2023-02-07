@@ -1,1 +1,6 @@
-.recipe__istruction-steps {padding: 0}
+.recipe__istruction-steps {
+  list-style-type: none;
+  counter-reset: instructionCounter;
+  padding-top: 15px;
+  margin-bottom: 19px;
+}

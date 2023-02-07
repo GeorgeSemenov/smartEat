@@ -1,2 +1,11 @@
 mixin instruction__content(modifier)
-  .instruction__content&attributes(attributes)
+  if modifier["texts"] == undefined
+    - modifier["texts"] = [{}];
+  p.instruction__content&attributes(attributes)
+    each text in modifier.texts
+      if text["modificator"] != undefined
+        span(class=text.modificator)!=text
+      else
+        #{text}
+
+    

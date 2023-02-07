@@ -4,3 +4,8 @@
     recipe<recipes[0]>
   }
 }
+
+{
+  mainInfo:,
+  recipes:[recipe]
+}

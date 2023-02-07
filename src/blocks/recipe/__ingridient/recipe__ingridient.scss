@@ -1,1 +1,14 @@
-.recipe__ingridient {padding: 0}
+.recipe__ingridient {
+  font-size: 1.58rem;
+  margin-bottom: 17px;
+  &:last-child{
+    margin-bottom:0px;
+  }
+  &:before{
+    content:"-";
+    margin-right: 2px;
+  }
+  @media (max-width: 500px) { 
+    font-size: 1.2rem;
+  }
+}

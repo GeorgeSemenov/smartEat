@@ -5,9 +5,5 @@ mixin recipes-screen(modifier)
   if modifier == undefined
     - modifier = {};
   .recipes-screen&attributes(attributes)
-    +main-info({
-      title:"Рецепты",
-      desc:"Индивидуальный план питания",
-      userInfo:"Иванов Ваня",
-    })
+    +main-info(modifier.mainInfo)(class="recipes-screen__main-info")
     +recipes-screen__recipes(modifier)

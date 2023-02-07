@@ -3,5 +3,11 @@ include __instruction/instructions-screen__instruction.pug
 include __instructions-left-column/instructions-screen__instructions-left-column.pug
 include __instructions-wrapper/instructions-screen__instructions-wrapper.pug
 include __main-info/instructions-screen__main-info.pug
+include ../main-info/main-info.pug
+include ../instruction/instruction.pug
 mixin instructions-screen(modifier)
+  if modifier == undefined
+    - modifier = {};
   .instructions-screen&attributes(attributes)
+    +main-info(modifier)
+    +instructions-screen__instructions-wrapper(modifier)

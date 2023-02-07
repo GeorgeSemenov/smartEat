@@ -1,2 +1,10 @@
 mixin recipe__advices(modifier)
   .recipe__advices&attributes(attributes)
+    if modifier["adviceTitle"] != undefined
+      +recipe__advices-title(modifier)
+    if modifier["adviceTexts"] != undefined
+      each adviceText in modifier.adviceTexts
+        if adviceText["modificator"] == undefined
+          - adviceText["modificator"] = "";
+        +recipe__advice-text(adviceText)(class=adviceText.modificator)      
+      

@@ -1,2 +1,4 @@
 mixin recipe__instruction-step-title(modifier)
-  .recipe__instruction-step-title&attributes(attributes)
+  if modifier["stepTitle"] == undefined
+    - modifier["stepTitle"] = "empty__stepTitle";
+  h5.recipe__instruction-step-title&attributes(attributes)!=modifier.stepTitle

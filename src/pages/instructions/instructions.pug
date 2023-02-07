@@ -1,0 +1,16 @@
+include ../../blocks/header/header.pug
+include ../../blocks/footer/footer.pug
+include ../../blocks/instructions-screen/instructions-screen.pug
+
+doctype html
+html(lang= 'ru')
+  head
+    meta(charset='utf-8')
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title= 'Smart life balance'
+  body
+    div
+      +header({})
+      main
+        +instructions-screen()
+    +footer()

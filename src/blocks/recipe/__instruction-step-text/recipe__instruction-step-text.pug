@@ -1,2 +1,4 @@
 mixin recipe__instruction-step-text(modifier)
-  .recipe__instruction-step-text&attributes(attributes)
+  if modifier["text"] == undefined
+    - modifier["text"] = "empty__text";
+  p.recipe__instruction-step-text&attributes(attributes)!=modifier.text

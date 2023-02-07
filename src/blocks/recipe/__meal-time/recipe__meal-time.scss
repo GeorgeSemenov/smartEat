@@ -1,1 +1,10 @@
-.recipe__meal-time {padding: 0}
+.recipe__meal-time {
+  text-align: center;
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin-bottom: 80px;
+  @media (max-width: 500) { 
+    font-size: 2rem;
+    margin-bottom: 30px;  
+  }
+}

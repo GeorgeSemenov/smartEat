@@ -11,3 +11,13 @@ instruction{
 //В параграфе будет обычный текст, в перемешку с модифицированным текстом, который указывается через textModificator вот какие содификаторы доступны:
 _bold
 _underlined
+
+{
+  title: "",
+  paragraphs: [
+    {
+      texts[{text:"",textModificator:""},],
+      modificator:""
+    },
+  ],
+}

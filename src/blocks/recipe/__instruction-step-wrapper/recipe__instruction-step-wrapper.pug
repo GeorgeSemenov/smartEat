@@ -1,2 +1,5 @@
 mixin recipe__instruction-step-wrapper(modifier)
-  .recipe__instruction-step-wrapper&attributes(attributes)
+  li.recipe__instruction-step-wrapper&attributes(attributes)
+    +recipe__instruction-step-title(modifier)
+    if modifier["text"] != undefined
+      +recipe__instruction-step-text(modifier)

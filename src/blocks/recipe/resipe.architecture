@@ -11,15 +11,32 @@
     __instruction{
       !h4__instruction-title<instructionTitle>
       !h4__instruction-recipe-name<instructionRecipeName>
-      ul__istruction-steps<instructionSteps[{stepTitle, text}]>{
+      ol__istruction-steps<instructionSteps[{stepTitle, text}]>{
         li__instruction-step-wrapper{
-          h6__instruction-step-title<stepTitle>
+          h5__instruction-step-title<stepTitle>
           p__instruction-step-text<text>
         }
       }
     }
   __advices{
     !p__advices-title<adviceTitle="Советы:">
-    p__advice-text<adviceText>
+    <adviceTexts>
+      p__advice-text<adviceText>
   }
+}
+
+{
+  mealTime:"!",
+  recipeTitle:"",
+  ingridientsTitle:"Что нужно:",
+  ingridients: [{text:"",modificator}],
+  instructions:[
+    {
+      instructionTitle:"!Как готовить:",
+      instructionRecipeName:"!",
+      instructionSteps:[{stepTitle:"", text:"!"}],
+    },
+  ],
+  adviceTitle:"!Советы:",
+  adviceTexts:[!{text:""}],
 }

@@ -5,5 +5,5 @@ mixin recipes-screen__recipes(modifier)
     each recipe in modifier.recipes
       if recipe["modificator"] == undefined
         - recipe["modificator"] = "";
-      +recipe(recipe)(class=recipe.modificator)
+      +recipe(recipe)(class="recipes-screen__recipe " + recipe.modificator)
     

@@ -1,1 +1,6 @@
-.recipe__instruction-step-title {padding: 0}
+.recipe__instruction-step-title {
+  line-height: 17px;
+  &:before{
+    content: counters(instructionCounter, '') '. ';
+  }
+}

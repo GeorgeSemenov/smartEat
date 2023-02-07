@@ -1,2 +1,9 @@
 mixin recipe__istruction-steps(modifier)
-  .recipe__istruction-steps&attributes(attributes)
+  if modifier["instructionSteps"] == undefined
+    - modifier["instructionSteps"] = [{}];
+  ol.recipe__istruction-steps&attributes(attributes)
+    each instruction in modifier.instructionSteps
+      if instruction["modificator"] == undefined
+        - instruction["modificator"] = "";
+      +recipe__instruction-step-wrapper(instruction)(class=instruction.modificator)
+    

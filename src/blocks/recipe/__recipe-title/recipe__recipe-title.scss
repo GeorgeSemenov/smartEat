@@ -1,1 +1,9 @@
-.recipe__recipe-title {padding: 0}
+.recipe__recipe-title {
+  font-size: 2.2rem;
+  font-weight: bold;
+  margin-bottom: 50px;
+  @media (max-width: 500) { 
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+}

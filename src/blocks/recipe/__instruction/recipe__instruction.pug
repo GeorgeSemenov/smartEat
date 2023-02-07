@@ -1,2 +1,7 @@
 mixin recipe__instruction(modifier)
   .recipe__instruction&attributes(attributes)
+    if modifier["instructionTitle"] != undefined
+      +recipe__instruction-title(modifier)
+    if modifier["instructionRecipeName"] != undefined
+      +recipe__instruction-recipe-name(modifier)
+    +recipe__istruction-steps(modifier)

@@ -1,1 +1,7 @@
-.recipe__instruction-step-wrapper {padding: 0}
+.recipe__instruction-step-wrapper {
+  font-size: 1.55rem;
+  margin-bottom: 14px;
+  &:last-child{margin-bottom:0px;}
+  counter-increment: instructionCounter;
+
+}

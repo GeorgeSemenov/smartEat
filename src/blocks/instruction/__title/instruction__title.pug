@@ -1,2 +1,4 @@
 mixin instruction__title(modifier)
-  .instruction__title&attributes(attributes)
+  if modifier["title"] == undefined
+    - modifier["title"] = "empty__title";
+  p.instruction__title&attributes(attributes)!=modifier.title

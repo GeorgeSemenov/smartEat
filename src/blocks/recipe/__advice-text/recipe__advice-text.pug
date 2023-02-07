@@ -1,2 +1,4 @@
 mixin recipe__advice-text(modifier)
-  .recipe__advice-text&attributes(attributes)
+  if modifier["text"] == undefined
+    - modifier["text"] = "empty__adviceText";
+  p.recipe__advice-text&attributes(attributes)!=modifier.text

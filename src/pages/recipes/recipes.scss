@@ -7,7 +7,7 @@
 /*блоки*/
 @import '../../blocks/header/header';
 @import '../../blocks/footer/footer';
-@import '../../blocks/menu-screen/menu-screen';
+@import '../../blocks/recipes-screen/recipes-screen';
 
 html {
   font-family: 'RobotoCondensed';
@@ -21,7 +21,7 @@ body{
   background-repeat: no-repeat;
   &>div{
     padding: 20px;
-    height: 100vh;
+    min-height: 100vh;
     box-sizing: border-box;
   }
 }

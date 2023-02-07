@@ -1,0 +1,8 @@
+mixin recipe__ingridients-list(modifier)
+  if modifier["ingridients"] == undefined
+    - modifier["ingridients"] = [{}];
+  ul.recipe__ingridients-list&attributes(attributes)
+    each ingridient in modifier.ingridients
+      if ingridient["modificator"] == undefined
+        - ingridient["modificator"] = "";
+      +recipe__ingridient(ingridient)(class=ingridient.modificator)

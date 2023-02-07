@@ -1,5 +1,8 @@
 .recipe {
-  padding: 0;  
+  font-size: 1.6rem;
+  @media (max-width: 500px) { 
+    font-size: 1.2rem;  
+  }
 }
 @import '__meal-time/recipe__meal-time';
 @import '__recipe-title/recipe__recipe-title';
@@ -16,3 +19,4 @@
 @import '__advices/recipe__advices';
 @import '__advices-title/recipe__advices-title';
 @import '__advice-text/recipe__advice-text';
+@import '__ingridients-list/recipe__ingridients-list';

@@ -9,3 +9,8 @@ instruction-screen{
     }
   }
 }
+
+{
+ instructionsLeftColumn:[instruction,],
+ instructionsRightColumn:[instruction,]
+}

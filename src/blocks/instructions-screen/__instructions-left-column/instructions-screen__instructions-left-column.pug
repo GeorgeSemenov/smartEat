@@ -1,2 +1,9 @@
 mixin instructions-screen__instructions-left-column(modifier)
+  if modifier["instructionsLeftColumn"] == undefined
+    - modifier["instructionsLeftColumn"] = [{}];
   .instructions-screen__instructions-left-column&attributes(attributes)
+    each instruction in modifier.instructionsLeftColumn
+      if instruction["modificator"] == undefined
+        - instruction["modificator"] = "";
+      +instruction(instruction)(class=instruction.modificator)
+    

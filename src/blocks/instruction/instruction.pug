@@ -1,4 +1,14 @@
 include __content/instruction__content.pug
 include __title/instruction__title.pug
 mixin instruction(modifier)
+  if modifier == undefined
+    - modifier = {};
+  if modifier["paragraphs"] == undefined
+    - modifier["paragraphs"] = [{}];
   .instruction&attributes(attributes)
+    +instruction__title(modifier)
+    each paragraph in modifier.paragraphs
+      if paragraph["modificator"] == undefined
+        - paragraph["modificator"] = "";
+      +instruction__content(paragraph)(class=paragraph.modificator)
+    
