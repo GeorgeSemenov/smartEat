@@ -1,6 +1,5 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
-const FileManagerPlugin = require('filemanager-webpack-plugin');
 const pages = require('./pages');
 
 module.exports = function(dirname){
@@ -37,23 +36,22 @@ module.exports = function(dirname){
         },
       ]
     },
-    plugins: [
-      new FileManagerPlugin({
-       events: {
-         onStart: {
-           delete: ['dist'],
-         },
-       },
-     }),
-    ].concat(pages.map(
+    plugins: [].concat(pages.map(
       page=>{
           return new HtmlWebpackPlugin({
             template: path.join(dirname, ('src/pages/' + page), (page + '.pug')),
             filename: (page + '.html'),
+            chunks: [page],//Эта запись выбирает повторяющиеся зависимости из файлов и выписывает его в отдельный файл, к томуже Добавляет на страницу только те файлы, которые начинаются с index (допустим index.js index.css даже несмотря на то что они находятся в отельных папках css/ и js/)
           })
         }
       )
     ),
+    optimization:{
+      splitChunks:{
+        chunks: 'all',//Указывает какие чанки (модули с используемым кодом) будут оптимизироваться (удалятся повторяющийся код и выносится в другой файл), возможные значения 'all'(проверяет все чанки) 'async'(Проверяет только асинхронные) 'initial'
+        name: 'common'//Файлы с общим кодом будут называться common.js и common.css, если имя не написать, то там будет vendor~index~blog.js или (css) 
+      }
+    },
     devServer: {
       watchFiles: path.join(dirname, 'src'),
       port: 9004,

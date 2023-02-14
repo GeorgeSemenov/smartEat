@@ -1,10 +1,11 @@
 //Подробные настройки см тут https://github.com/GeorgeSemenov/tesJobHouseofTheSites/blob/master/webpack.config.js
-const { merge } = require('webpack-merge');
-const path      = require('path');
-const pages     = require('./webpack/pages');
-const getCommon = require('./webpack/common');
-const inlineCSS = require('./webpack/inlineCSS');
-const files     = require('./webpack/files')
+const { merge }             = require('webpack-merge');
+const path                  = require('path');
+const pages                 = require('./webpack/pages');
+const getCommon             = require('./webpack/common');
+const inlineCSS             = require('./webpack/inlineCSS');
+const fileManagerPlugin     = require('./webpack/fileManagerPlugin')//Для удаления папки dist
+const extractCss            = require('./webpack/extractCss')
 
 module.exports = function(env,argv){
   const common = getCommon(__dirname)
@@ -13,7 +14,8 @@ module.exports = function(env,argv){
     common.output.publicPath = "./"; //Указываем нормальный пукть, чтобы сборка была человеческой
     return merge([
       common,
-      inlineCSS,
+      extractCss,
+      fileManagerPlugin,
     ])
   }
   if(argv.mode === 'development'){
