@@ -52,9 +52,5 @@ module.exports = function(dirname){
         name: 'common'//Файлы с общим кодом будут называться common.js и common.css, если имя не написать, то там будет vendor~index~blog.js или (css) 
       }
     },
-    devServer: {
-      watchFiles: path.join(dirname, 'src'),
-      port: 9004,
-    },
   };
 }

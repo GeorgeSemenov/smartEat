@@ -4,7 +4,7 @@ mixin logo(modifier)
   if modifier == undefined
     - modifier = {};
   if modifier["href"] == undefined
-    - modifier["href"] = "smartlifebalance.com";
+    - modifier["href"] = "https://smartlifebalance.com";
   a.logo(href=modifier.href)&attributes(attributes)
     +logo__img(modifier)
     if modifier["text"] != undefined

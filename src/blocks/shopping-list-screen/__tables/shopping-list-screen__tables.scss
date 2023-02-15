@@ -1,9 +1,9 @@
 .shopping-list-screen__tables {
-  display: flex;
-  justify-content: flex-start;
-  @media (max-width: 450px) {
-    flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(2,212px);
+  @media (max-width: 500px) {
+    grid-template-columns: repeat(1,212px);
     justify-content: center;
-    align-items: center;
+    gap: 10px;
   }
 }

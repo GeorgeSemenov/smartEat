@@ -1,10 +1,9 @@
 .instructions-screen__instructions-left-column,
 .instructions-screen__instructions-right-column {
-  flex-basis: 50%;
   padding-right: 40px;
   box-sizing: border-box;
   @media (max-width: 500px) { 
     padding-right: 0px;  
-    flex-basis: 100%;
+    margin-bottom: 15px;
   }
 }

@@ -1,5 +1,5 @@
 .properties-table__row {
   line-height: 14px;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: auto 40px;
 }

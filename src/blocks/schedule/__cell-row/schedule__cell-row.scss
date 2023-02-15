@@ -1,7 +1,8 @@
 .schedule__cell-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
+  display: grid;
+  grid-template-columns: 1fr 0.2fr;
+  margin-bottom: 1px;
+  align-items: end;
   margin-bottom: 1px ; 
   &:last-child{
     margin-bottom:0px;

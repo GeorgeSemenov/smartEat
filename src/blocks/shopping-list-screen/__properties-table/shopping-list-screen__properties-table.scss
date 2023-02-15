@@ -1,5 +1,4 @@
 .shopping-list-screen__properties-table {
-  width: 212px;
   &:nth-child(2){
     width: 250px;
     .properties-table__table{
@@ -14,10 +13,22 @@
       padding-right: 8px;
     }
   }
-  @media (max-width: 450px) {
+  @media (max-width: 500px) {
     margin-bottom: 15px;
     &:last-child{
       margin-bottom:0px;
+    }
+    &:nth-child(1){
+      .properties-table__table{
+        padding-right: 0;
+      }
+    }
+    &:nth-child(2){
+      width: auto;
+      .properties-table__table{
+        border: none;
+        padding-left: 0;
+      }
     }
   }
 }

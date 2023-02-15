@@ -13,6 +13,10 @@
   justify-items: center;
   gap: 0px 15px;
   margin-bottom: 27px ; 
+  
+  @media (max-width: 600px) { 
+    overflow: scroll;
+  }
 }
 
 /*

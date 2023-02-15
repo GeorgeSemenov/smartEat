@@ -3,6 +3,6 @@ include __site/footer__site.pug
 mixin footer(modifier)
   footer.footer&attributes(attributes)
     if modifier == undefined
-      - modifier = {site: "smartlifebalance.com",siteHref:"smartlifebalance.com", phone: "+7 499 714-64-91", tel:"74997146491", link: {text: "smarteat_ru"}};
+      - modifier = {site: "smartlifebalance.com",siteHref:"https://smartlifebalance.com", phone: "+7 499 714-64-91", tel:"74997146491", link: {text: "smarteat_ru"}};
     +footer__site(modifier)
     +footer__phone(modifier)
