@@ -1,3 +1,9 @@
+@import '__table-head/shopping-list-screen__table-head';
+@import '__food-table-rows/shopping-list-screen__food-table-rows';
+@import '__food-value/shopping-list-screen__food-value';
+@import '__food-name/shopping-list-screen__food-name';
+@import '__food-table-row/shopping-list-screen__food-table-row';
+@import '__food-table/shopping-list-screen__food-table';
 @import '__tables-divider/shopping-list-screen__tables-divider';
 @import '__main-info/shopping-list-screen__main-info';
 @import '__properties-table/shopping-list-screen__properties-table';
@@ -10,6 +16,6 @@
 /*
 {
   mainInfo:{main-info},
-  propTables:[{propertiesTable}],
+  __food-table<columns[{head:"",foodNameValuePairs[{name:"value"}]}]>
 }
 */
