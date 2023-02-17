@@ -1,2 +1,8 @@
 mixin shopping-list-screen__food-table-row(modifier)
+  if modifier == undefined
+    - modifier = [{}];
   .shopping-list-screen__food-table-row&attributes(attributes)
+    each val, name in modifier
+      +shopping-list-screen__food-name(name)(class=modifier.modificator)
+      +shopping-list-screen__food-value(val)(class=modifier.modificator)
+    

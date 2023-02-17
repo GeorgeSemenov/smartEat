@@ -2,4 +2,5 @@ mixin footer__site(modifier)
   if modifier["siteHref"] == undefined
     - modifier["siteHref"] = "#!";
   if modifier["site"] != undefined
-    a.footer__site(href=modifier.siteHref)&attributes(attributes)!=modifier.site
+    td.footer__site&attributes(attributes)
+      a(href=modifier.siteHref)!=modifier.site

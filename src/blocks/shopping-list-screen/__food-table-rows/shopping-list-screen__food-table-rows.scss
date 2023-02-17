@@ -1,1 +1,11 @@
-.shopping-list-screen__food-table-rows {}
+.shopping-list-screen__food-table-rows {
+  padding-right: 10px ;
+  padding-top: 8px; 
+  padding-bottom: 10px;
+  width: 203px;
+
+  & + .shopping-list-screen__food-table-rows{
+    padding-left: 8px;
+    border-left: 1px solid black;
+  }
+}

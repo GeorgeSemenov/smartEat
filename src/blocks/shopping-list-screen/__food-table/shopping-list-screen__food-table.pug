@@ -1,3 +1,15 @@
 mixin shopping-list-screen__food-table(modifier)
+  if modifier["tableColumns"] == undefined
+    - modifier["tableColumns"] = [{}];
   table.shopping-list-screen__food-table&attributes(attributes)
-    
+    tr
+      each tableColumn in modifier.tableColumns
+        if tableColumn["modificator"] == undefined
+          - tableColumn["modificator"] = "";
+        +shopping-list-screen__table-head(tableColumn)(class=tableColumn.modificator)
+    tr
+      each tableColumn in modifier.tableColumns
+        if tableColumn["modificator"] == undefined
+          - tableColumn["modificator"] = "";
+        +shopping-list-screen__food-table-rows(tableColumn)(class=tableColumn.modificator)
+        

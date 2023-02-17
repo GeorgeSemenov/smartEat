@@ -1,2 +1,4 @@
 mixin shopping-list-screen__table-head(modifier)
-  .shopping-list-screen__table-head&attributes(attributes)
+  if modifier["head"] == undefined
+    - modifier["head"] = "empty__head";
+  th.shopping-list-screen__table-head&attributes(attributes)!=modifier.head

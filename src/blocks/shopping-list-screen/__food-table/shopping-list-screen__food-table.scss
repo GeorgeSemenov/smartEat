@@ -1,1 +1,7 @@
-.shopping-list-screen__food-table {}
+.shopping-list-screen__food-table {
+  font-size: 1.15rem;
+  border-spacing: 0 10px;
+  @media (max-width: 500px){
+    overflow: scroll;
+  }
+}

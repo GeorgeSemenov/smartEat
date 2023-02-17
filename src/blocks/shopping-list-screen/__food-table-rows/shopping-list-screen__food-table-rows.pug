@@ -1,2 +1,4 @@
 mixin shopping-list-screen__food-table-rows(modifier)
-  .shopping-list-screen__food-table-rows&attributes(attributes)
+  td.shopping-list-screen__food-table-rows&attributes(attributes)
+    each foodNameValuePair in modifier.foodNameValuePairs
+      +shopping-list-screen__food-table-row(foodNameValuePair)(class=foodNameValuePair.modificator)

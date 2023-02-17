@@ -15,7 +15,32 @@
 
 /*
 {
-  mainInfo:{main-info},
-  __food-table<columns[{head:"",foodNameValuePairs[{name:"value"}]}]>
+  mainInfo
+  table__food-table{
+    tr<tableColumns[{head:"",foodNameValuePairs[{name:"value"}]}]>{
+      th__table-head<head:"">
+    }
+    tr<tableColumns:[~]>{
+      td__food-table-rows{
+        table{
+          tr<foodNameValuePairs:[{name:"value"}]}]>{
+            td__food-name<name>
+            td__food-value<value>
+          }
+        }
+      }
+    }
+  }
+}
+*/
+/*
+{
+  mainInfo: mainInfo,
+  tableColumns[
+    {
+      head:"",
+      foodNameValuePairs[{name:"value"}]
+    }
+  ]  
 }
 */

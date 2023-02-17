@@ -1,6 +1,6 @@
 module.exports = [
-  'index',
-  "recipes",
-  "instructions",
+  // 'index',
+  // "recipes",
+  // "instructions",
   'shoppingList',
 ]
