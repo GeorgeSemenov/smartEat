@@ -1,5 +1,7 @@
 .shopping-list-screen__food-value {
   text-align: right;
   display: inline-block;
-  float: right;
+  position: absolute;
+  top: 0;
+  right: 0;
 }

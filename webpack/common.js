@@ -10,7 +10,7 @@ module.exports = function(dirname){
     },{}),//второй аргумент reduce - это начальное значение для суммарного объекта config
     output: {
       path: path.join(dirname, 'dist'),
-      filename: '[name].[contenthash].js',
+      filename: '[name].js',
       assetModuleFilename: path.join('images', '[name].[contenthash][ext]'),
     },
     module: {
