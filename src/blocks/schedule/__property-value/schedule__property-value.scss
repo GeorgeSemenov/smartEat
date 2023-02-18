@@ -1,1 +1,7 @@
-.schedule__property-value {}
+.schedule__property-value {
+  text-align: right;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  right: 0;
+}

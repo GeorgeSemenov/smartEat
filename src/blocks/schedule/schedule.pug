@@ -11,26 +11,28 @@ mixin schedule(modifier)
   if modifier == undefined
     - modifier = {};
 
-  .schedule&attributes(attributes)
+  table.schedule&attributes(attributes)
     if modifier["columnHeads"] == undefined
       - modifier["columnHeads"] = [];
+    else 
+      - modifier["columnHeads"].unshift('')
     if modifier["rows"] == undefined
       - modifier["rows"] = [];
 
-    div 
-
-    each columnHead in modifier.columnHeads
-      if columnHead["modificator"] == undefined
-        - columnHead["modificator"] = "";
-      +schedule__column-head(columnHead)(class=columnHead.modificator)
+    tr 
+      each columnHead in modifier.columnHeads
+        if columnHead["modificator"] == undefined
+          - columnHead["modificator"] = "";
+        +schedule__column-head(columnHead)(class=columnHead.modificator)
     
     each row in modifier.rows
       if row["modificator"] == undefined
         - row["modificator"] = "";
-      +schedule__row-head(row)(class=row.modificator)
-      each cell in row.cells
-        if cell["modificator"] == undefined
-          - cell["modificator"] = "";
-        +schedule__cell(cell)(class=cell.modificator)
+      tr
+        +schedule__row-head(row)(class=row.modificator)
+        each cell in row.cells
+          if cell["modificator"] == undefined
+            - cell["modificator"] = "";
+          +schedule__cell(cell)(class=cell.modificator)
 
   +schedule__caption(modifier)

@@ -10,7 +10,7 @@ pages.forEach(page=>{
   const endingIndex = htmlContent.indexOf('</head>');
   const newHtmlContent = htmlContent.slice(0, beginingIndex) 
                          + '<style>' 
-                         + cssContent 
+                         + cssContent.replace(/\\/g, "/") //если проект собирается в windows нужно заменить неправильиные слэши на корректные, чтобы пути сохранялись.
                          + '</style>' 
                          + htmlContent.slice(endingIndex);
   deleteFile(`./dist/${page}.css`)

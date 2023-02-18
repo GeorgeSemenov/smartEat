@@ -1,8 +1,14 @@
 .instructions-screen__instructions-left-column,
 .instructions-screen__instructions-right-column {
+  display: inline-block;
+  width: 40%;
   padding-right: 40px;
   box-sizing: border-box;
+  @media (max-width: 600px) { 
+    padding-right: 25px;
+  }
   @media (max-width: 500px) { 
+    width: 100%;
     padding-right: 0px;  
     margin-bottom: 15px;
   }

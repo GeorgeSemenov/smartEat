@@ -1,4 +1,4 @@
 mixin footer__phone(modifier)
-  if modifier["phone"] != undefined
+  if modifier["tel"] != undefined
     td.footer__phone&attributes(attributes)
-      a(href="tel:+#{modifier.tel}")!=modifier.phone
+      a(href="tel:+"+modifier.tel)!=modifier.phone

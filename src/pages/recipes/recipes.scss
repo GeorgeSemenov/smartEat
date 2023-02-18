@@ -4,24 +4,10 @@
 /*Цвета*/
 @import '../../styles/colors';
 
+/*глобальные стили*/
+@import '../../styles/global';
+
 /*блоки*/
 @import '../../blocks/header/header';
 @import '../../blocks/footer/footer';
 @import '../../blocks/recipes-screen/recipes-screen';
-
-html {
-  font-family: 'RobotoCondensed';
-  font-weight: 400;
-  font-size: 10px;
-}
-
-body{
-  background: url('../../images/background-cereral.png'), $body--BGColor;
-  background-position: top right;
-  background-repeat: no-repeat;
-  &>div{
-    padding: 20px;
-    min-height: 100vh;
-    box-sizing: border-box;
-  }
-}

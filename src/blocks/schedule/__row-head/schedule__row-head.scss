@@ -1,8 +1,12 @@
 .schedule__row-head {
-  display: grid;
-  justify-content: center;
-  align-items: center;
+  position: relative;
+  padding-right: 44px  ;
+
   p {
     transform: rotate(-90deg);
+    position: relative;
+    left: 20px;
+    top: 40px;
+    width: 10px;
   }
 }
