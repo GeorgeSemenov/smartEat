@@ -1,4 +1,7 @@
 .instructions-screen__instructions-left-column {
+  position: absolute;
+  top: 0;
+  right: 0;  
   //Т.к. стили у left-column точно такиеже как и у right-column
   //то я их просто описал в элементе instructions-screen__instructions-right-column
 }
