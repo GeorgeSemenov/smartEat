@@ -2,4 +2,7 @@
   line-height: 14px;
   width: 212px;
   position: relative;
+  &:nth-child(35n){
+    page-break-after: always;
+  }
 }
